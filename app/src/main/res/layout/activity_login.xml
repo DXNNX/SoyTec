@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dxnnx.com.soytec.Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Correo"
+            android:inputType="textEmailAddress" />
+        android:ems="10"
+        android:hint="Correo (@itcr.ac.cr)"
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Contraseña"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="login"
+            android:text="Iniciar Sesion" />
+
+        <Button
+            android:id="@+id/registrobtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="regClic"
+            android:text="Registro"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="212dp" />
+
+        <TextView
+            android:id="@+id/errorLogin"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Notification"
+            android:textColor="@color/colorAccent"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="201dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/fotoimg"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:onClick="postCompleto"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/nombretxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fotoimg"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fechatxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombretxt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fotoimg" />
+        />
+
+        <TextView
+            android:id="@+id/descripciontxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fechatxt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fotoimg" />
+        />
+
+        <TextView
+            android:id="@+id/idtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoriatxt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fotoimg" />
+        />
+
+        <TextView
+            android:id="@+id/ubicaciontxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descripciontxt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fotoimg" />
+        />
+        <TextView
+            android:id="@+id/categoriatxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ubicaciontxt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fotoimg" />
+        />
+
+        <View
+            android:id="@+id/linea"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/idtxt"
+            android:layout_toRightOf="@+id/fotoimg"
+            android:background="#ffd5d5d5">
+
+        </View>
+
+        <LinearLayout
+            android:id="@+id/botones"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/linea"
+            android:layout_toRightOf="@+id/fotoimg"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical|center_horizontal|center">
+
+
+            <ImageButton
+                android:id="@+id/borrarImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignRight="@+id/favorito"
+                android:layout_toRightOf="@+id/fotoimg"
+                android:onClick="deletePost"
+                card_view:srcCompat="@android:drawable/ic_delete" />
+
+            <ImageButton
+                android:id="@+id/updateImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:onClick="updatePost"
+                card_view:srcCompat="@android:drawable/ic_menu_edit" />
+
+            <ImageButton
+                android:id="@+id/checkedBtn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:onClick="checked"
+                android:visibility="gone"
+                card_view:srcCompat="@android:drawable/checkbox_on_background" />
+
+            <ImageView
+                android:id="@+id/favorito"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:onClick="manageFavs"
+                android:src="@mipmap/unfav" />
+
+
+            android:onClick="manageFavs"
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
